@@ -1,0 +1,32 @@
+{
+  "name": "hmcts_task_backend",
+  "version": "1.0.0",
+  "description": "A simple REST API backend for HMCTS task management.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.0.4",
+    "prisma": "^6.11.1",
+    "supertest": "^7.1.1",
+    "ts-jest": "^29.4.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
