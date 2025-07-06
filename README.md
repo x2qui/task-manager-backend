@@ -1,28 +1,90 @@
-# Caseworker Task Management API – HMCTS Developer Challenge
+# HMCTS Task Manager
 
-A simple REST API backend to help caseworkers manage their daily tasks. Built using Node.js + TypeScript + Express.
+A full-stack case task management application built as part of the HMCTS developer challenge. This system allows caseworkers to manage, update, and track tasks efficiently using a modern UI and REST API.
 
-## Features
 
-- Create, retrieve, update (status), and delete tasks
-- Task fields: title, description (optional), status, dueDate
-- Structured in MVC format
-- Tested with Jest + Supertest
+# ✨ Features
+
+- 📋 Create, view, update, and delete tasks
+- 📁 Upload and download task attachments
+- 🔍 Search by Task ID or Case Number
+- 🎯 Filter tasks by status (Open, In Progress, Completed)
+- 🧪 Unit and integration tests using Jest + Supertest
+- ⚡ Built with React, TypeScript, Node.js, Express, and Prisma
+- 💾 SQLite database (default)
+
+
+# 🖥️ Tech Stack
+
+# Frontend
+- React + TypeScript
+- Tailwind CSS
+- Axios
+
+# Backend
+- Node.js + Express
+- TypeScript
+- Prisma ORM
+- SQLite
+- Multer (file uploads)
+
+# Testing
+- Jest
+- Supertest
+
+
+# 📚 How to use
+
+Once the application is running:
+
+### 1.Create a Task
+- Use the form on the right-hand side.
+- Enter the title, case number, description, due date, status, and optionally upload a file.
+- Click "Create Task" to submit.
+### View Tasks
+- All created tasks will appear in the left column.
+- Each task card displays title, case number, due date, and description.
+### Search Tasks
+- Use the search bar to find tasks by ID or Case Number.
+### Filter Tasks
+- Use the tabs at the top to filter by status: All Cases, Open Cases, In Progress, Completed.
+### Update Status
+- Click the status badge on any task card to cycle between statuses.
+### Download Attachments
+- If a task has a file, click “Download” to retrieve it.
+### Delete Task
+- Click the trash icon 🗑️ to delete a task.
+
+
 
 ## Getting Started
-
+### Install backend Dependencies
 ```bash
 npm install
-npm run start
 ```
 
-## Running Tests
+### setup environment
+```bash
+DATABASE_URL="file:./dev.db"
+PORT=4000
+```
+### Run prisma Migrations
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+```
+### Running Tests
 
 ```bash
 npm test
 ```
 
-## API Endpoints
+### Starting the server
+```bash
+npm run start
+```
+
+### API Endpoints
 
 - `GET /tasks` – list all tasks
 - `GET /tasks/:id` – get a specific task
